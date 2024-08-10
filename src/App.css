@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .App {
   text-align: center;
 }
@@ -36,3 +39,94 @@
     transform: rotate(360deg);
   }
 }
+
+.go-login{
+  outline: black 2px solid;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 2px;
+}
+
+.login-bttn{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px;
+  cursor: pointer;
+}
+.login-bttn div{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.logo-img{
+  display: flex;
+  justify-content: center;
+}
+
+.menu-list{
+  display: flex;
+  list-style: none;
+}
+
+.menu-list li{
+  padding: 10px;
+}
+
+.menu-area{
+  display: flex;
+  justify-content: center;
+}
+
+.modal-show{
+  display: 'flex';
+}
+
+.search-box{
+  display: flex;
+  justify-content: flex-end;
+}
+.search-underline{
+  display: inline-flex;
+  align-items: center;
+  margin-right: 80px;
+  border-bottom: gray 1px solid;
+}
+.card-box{
+  transition: all 0.2s linear;
+  width: 300px;
+  margin-bottom: 30px;
+  min-height: 616px;
+}
+
+.card-box:hover{
+  scale: 110%;
+}
+
+#dropdown-basic{
+  background-color: transparent;
+  color: black;
+  border-color: black;
+  border: 2px solid;
+  margin-top: 10px;
+
+}
+
+.button-container{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.button-container button:first-child{
+  width: 80%;
+  height: 80%;
+}
+
+
+
+/* 
+@media only screen and (max-width: 575px) { 
+  .menu-area{
+    display: none;
+  }
+ }  */
