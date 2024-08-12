@@ -3,27 +3,26 @@ import ProductCard from "../components/ProductCard";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { useSearchParams } from 'react-router-dom';
-
-const ProductAll = ({tab}) => {
-  const [productList, setProductList] = useState(null);
+import { useSearchParams } from "react-router-dom";
+function ProductFilter() {
+    const [productList, setProductList] = useState(null);
   const [query,setQuery] = useSearchParams();
-
   const getProducts = async () => {
-    let searchQuery = query.get('q')||"";
-    let url = `https://my-json-server.typicode.com/dgKim1/boxshopMall/products?q=${searchQuery}`;
+    let tabQuery = query.get('search')||"";
+    let url = `https://my-json-server.typicode.com/dgKim1/boxshopMall/products?&`;
+    (tabQuery === "남성")||(tabQuery==="여성") ? url+=`gender=${tabQuery}`:url+=`category=${tabQuery}`;
+    console.log(url);
     let response = await fetch(url);
     let data = await response.json();
     setProductList(data);
   };
-
+    
   useEffect(() => {
     getProducts();
   }, [query]);
-
   return (
     <div>
-      <Container id='products-list'>
+        <Container id='products-list'>
         <Row>
             {
             productList&&productList.map((product)=>(
@@ -34,8 +33,9 @@ const ProductAll = ({tab}) => {
             }
         </Row>
       </Container>
+      
     </div>
-  );
-};
+  )
+}
 
-export default ProductAll;
+export default ProductFilter

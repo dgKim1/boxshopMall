@@ -24,6 +24,10 @@ function Navbar({ authenticate, setAuthenticate }) {
     }
   };
 
+  const onClickTab = (menu) =>{
+    navigate(`/filter?search=${menu}`)
+  }
+
   const goToHome = () => {
     navigate("/");
   };
@@ -52,7 +56,7 @@ function Navbar({ authenticate, setAuthenticate }) {
       <div className="menu-area">
         <ul className="menu-list">
           {MenuList.map((menu) => (
-            <li>{menu}</li>
+            <button onClick={()=>onClickTab(menu)}>{menu}</button>
           ))}
         </ul>
       </div>

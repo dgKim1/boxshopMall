@@ -7,8 +7,9 @@
             "price":99900,
             "choice":true,
             "new":true,
-            "size":["S","M","L"]
-
+            "size":["S","M","L"],
+            "category": "Top",
+            "gender":"여성"    
         },
         {
             "id":1,
@@ -17,7 +18,9 @@
             "price":29900,
             "choice":true,
             "new":true,
-            "size":["S","M","L"]
+            "size":["S","M","L"],
+            "category": "Top",
+            "gender": "남성"
 
         },
         {
@@ -27,7 +30,9 @@
             "price":39900,
             "choice":false,
             "new":true,
-            "size":["S","M","L"]
+            "size":["S","M","L"],
+            "category": "Top",
+            "gender":"여성" 
 
         },
         {
@@ -37,7 +42,9 @@
             "price":39900,
             "choice":false,
             "new":true,
-            "size":["S","M","L"]
+            "size":["S","M","L"],
+            "category": "Top",
+            "gender":"여성" 
 
         },
         {
@@ -47,7 +54,9 @@
             "price":29900,
             "choice":true,
             "new":false,
-            "size":["S","M","L"]
+            "size":["S","M","L"],
+            "category": "Top",
+            "gender":"여성" 
 
         },
         {
@@ -57,7 +66,9 @@
             "price":39900,
             "choice":false,
             "new":false,
-            "size":["S","M","L"]
+            "size":["S","M","L"],
+            "category": "Top",
+            "gender":"여성" 
 
         },
         {
@@ -67,7 +78,9 @@
             "price":39900,
             "choice":true,
             "new":false,
-            "size":["S","M","L"]
+            "size":["S","M","L"],
+            "category": "Top",
+            "gender":"여성" 
 
         },
         {
@@ -77,7 +90,9 @@
             "price":99900,
             "choice":false,
             "new":true,
-            "size":["S","M","L"]
+            "size":["S","M","L"],
+            "category": "Top",
+            "gender":"여성" 
 
         },
         {
@@ -87,7 +102,9 @@
             "price":14900,
             "choice":true,
             "new":true,
-            "size":["S","M","L"]
+            "size":["S","M","L"],
+            "category": "Top",
+            "gender":"여성" 
 
         },
         {
@@ -97,7 +114,9 @@
             "price":19900,
             "choice":false,
             "new":true,
-            "size":["S","M","L"]
+            "size":["S","M","L"],
+            "category": "Top",
+            "gender":"여성" 
 
         },
         {
@@ -107,7 +126,9 @@
             "price":19900,
             "choice":true,
             "new":false,
-            "size":["S","M","L"]
+            "size":["S","M","L"],
+            "category": "Top",
+            "gender":"여성" 
 
         },
         {
@@ -117,7 +138,9 @@
             "price":29900,
             "choice":true,
             "new":true,
-            "size":["S","M","L"]
+            "size":["S","M","L"],
+            "category": "Top",
+            "gender":"여성" 
 
         },
         {
@@ -127,7 +150,9 @@
             "price":14900,
             "choice":true,
             "new":true,
-            "size":["S","M","L"]
+            "size":["S","M","L"],
+            "category": "Top",
+            "gender":"여성" 
 
         },
         {
@@ -137,7 +162,9 @@
             "price":29900,
             "choice":false,
             "new":false,
-            "size":["S","M","L"]
+            "size":["S","M","L"],
+            "category": "Top",
+            "gender":"여성" 
 
         }
     ]

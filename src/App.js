@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import { useState } from 'react';
 import PrivateRoute from './Routes/PrivateRoute';
 import Logout from './page/Logout';
+import ProductFilter from './page/ProductFilter';
 
 function App() {
   const [authenticate,setAuthenticate] = useState(false);
@@ -15,7 +16,8 @@ function App() {
     <div>
       <Navbar class="menu-area" authenticate={authenticate} setAuthenticate={setAuthenticate}/>
       <Routes>
-        <Route path="/" element={<ProductAll/>}/>
+        <Route path="/" element={<ProductAll />}/>
+        <Route path="/filter" element={<ProductFilter />}/>
         <Route path="/login" element={<Login setAuthenticate={setAuthenticate}/>}/>
         <Route path="/logout" element={<Logout/>}/>
         <Route path="/product/:id" element={<PrivateRoute authenticate={authenticate} />}/>
