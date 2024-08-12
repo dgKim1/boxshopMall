@@ -1,9 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
-import { FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { IoIosSearch } from "react-icons/io";
+import Sidebar from './Sidebar';
 
 function Navbar({ authenticate, setAuthenticate }) {
   const MenuList = ["여성", "남성", "Top", "Bottom"];
@@ -27,7 +27,8 @@ function Navbar({ authenticate, setAuthenticate }) {
   const goToHome = () => {
     navigate("/");
   };
-  console.log(authenticate);
+
+
   return (
     <div>
       <div className="login-bttn" onClick={goToLogin}>
@@ -35,7 +36,7 @@ function Navbar({ authenticate, setAuthenticate }) {
         {authenticate ? <div>로그아웃</div> : <div>로그인</div>}
       </div>
       <div className="logo-img" onClick={goToHome}>
-        <img width={100} src="https://www2.hm.com/hm-logo.png" />
+        <img width={300} src='/img/shopmallLogo.png' />
       </div>
       <div className="search-box">
         <div className="search-underline">
@@ -55,6 +56,7 @@ function Navbar({ authenticate, setAuthenticate }) {
           ))}
         </ul>
       </div>
+      <Sidebar/>
     </div>
   );
 }

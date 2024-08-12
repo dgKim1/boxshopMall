@@ -122,11 +122,10 @@
   height: 80%;
 }
 
-
-
-/* 
-@media only screen and (max-width: 575px) { 
-  .menu-area{
-    display: none;
+@media (max-width:575px){
+  #products-list{
+    padding-left: 24px;
   }
- }  */
+}
+
+
