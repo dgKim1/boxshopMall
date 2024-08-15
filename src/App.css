@@ -1,10 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 .App {
   text-align: center;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -40,13 +37,78 @@
   }
 }
 
-.go-login{
-  outline: black 2px solid;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin-left: 2px;
+.login-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login-logo{
+  height: 20%;
+  align-items: center;
+}
+.id-box{
+  display: flex;
+  flex-direction: column;
+  height: 20%;
+  width: 80%;
+  border: #c5ccd2 1px solid;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding-left: 10px;
 }
 
+.id-box-bottom{
+  display: flex;
+  flex-direction: column;
+  height: 20%;
+  width: 80%;
+  border: #c5ccd2 1px solid;
+  border-top: 0px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding-left: 10px;
+}
+
+.input-id{
+  height: 60%;
+}
+
+.input-id:focus{
+  outline: none;
+}
+
+.input-email{
+  outline: black;
+}
+
+
+.login-form{
+  display: flex;
+  justify-content: center;
+  border: #c5ccd2 2px solid;
+  border-radius: 10px;
+  width: 40%;
+}
+
+
+.login-wrap{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form-bttn{
+  background-color: black;
+  justify-content: flex-end;
+  color: white;
+  width: 80%;
+  border-radius: 5px;
+  margin-top: 5%;
+  height: 15%;
+  font-weight: bold;
+}
 .login-bttn{
   display: flex;
   justify-content: flex-end;
@@ -61,6 +123,21 @@
 .logo-img{
   display: flex;
   justify-content: center;
+}
+
+.logo-img img{
+  height: 300px;
+  width: 400px;
+}
+.outfit-shop {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.outfit-shop:hover{
+  cursor: pointer;
 }
 
 .menu-list{
@@ -91,6 +168,7 @@
   margin-right: 80px;
   border-bottom: gray 1px solid;
 }
+
 .card-box{
   transition: all 0.2s linear;
   width: 300px;
@@ -120,6 +198,33 @@
 .button-container button:first-child{
   width: 80%;
   height: 80%;
+}
+
+.li-passwd::before,
+.li-sign::before
+{
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 12px;
+  background-color: #c5ccd2;
+  top: 6px;
+}
+li:first-child a{
+  padding-right: 6px;
+}
+.li-passwd a,
+.li-sign a
+{
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.find-text{
+display: inline-block;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+    color: #888;
 }
 
 @media (max-width:575px){

@@ -17,10 +17,10 @@ const Sidebar = () => {
       <button onClick={openNav} className='menu-box'><CiMenuBurger size={25}/></button>
       <div id="mySidenav" className="sidenav">
       <a href="javascript:void(0)" class="closebtn" onClick={closeNav}>&times;</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <a href="#">여성</a>
+        <a href="#">남성</a>
+        <a href="#">Top</a>
+        <a href="#">Bottom</a>
       </div>
     </div>
   );

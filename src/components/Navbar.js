@@ -1,8 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
+import { IoPerson } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { IoIosSearch } from "react-icons/io";
+import { IoPersonOutline } from "react-icons/io5";
 import Sidebar from './Sidebar';
 
 function Navbar({ authenticate, setAuthenticate }) {
@@ -36,11 +38,10 @@ function Navbar({ authenticate, setAuthenticate }) {
   return (
     <div>
       <div className="login-bttn" onClick={goToLogin}>
-        <FontAwesomeIcon icon={faUser} />
-        {authenticate ? <div>로그아웃</div> : <div>로그인</div>}
+        {authenticate ? <><IoPerson/><div>로그아웃</div></> : <><IoPersonOutline/><div>로그인</div></>}
       </div>
       <div className="logo-img" onClick={goToHome}>
-        <img width={300} src='/img/shopmallLogo.png' />
+        <img width={300}  src='/img/shopmallLogo.png' />
       </div>
       <div className="search-box">
         <div className="search-underline">
@@ -56,7 +57,7 @@ function Navbar({ authenticate, setAuthenticate }) {
       <div className="menu-area">
         <ul className="menu-list">
           {MenuList.map((menu) => (
-            <button onClick={()=>onClickTab(menu)}>{menu}</button>
+            <li onClick={()=>onClickTab(menu)} className='outfit-shop'>{menu}</li>
           ))}
         </ul>
       </div>

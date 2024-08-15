@@ -13,7 +13,7 @@ import ProductFilter from './page/ProductFilter';
 function App() {
   const [authenticate,setAuthenticate] = useState(false);
   return (
-    <div>
+    <div className='h-full'>
       <Navbar class="menu-area" authenticate={authenticate} setAuthenticate={setAuthenticate}/>
       <Routes>
         <Route path="/" element={<ProductAll />}/>
