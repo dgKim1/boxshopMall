@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useSearchParams } from 'react-router-dom';
+import SimpleSlider from '../components/SimpleSlider';
 
 const ProductAll = ({tab}) => {
   const [productList, setProductList] = useState(null);

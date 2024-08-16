@@ -38,6 +38,7 @@ const Login = ({setAuthenticate}) => {
         <li className='li-sign'><a className='find-text'>회원가입</a></li>
       </ul>
       </div>
+      <div id='banner'>dsfx</div>
     </Container>
   )
 }

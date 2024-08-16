@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { IoIosSearch } from "react-icons/io";
 import { IoPersonOutline } from "react-icons/io5";
 import Sidebar from './Sidebar';
+import SimpleSlider from './SimpleSlider';
 
 function Navbar({ authenticate, setAuthenticate }) {
   const MenuList = ["여성", "남성", "Top", "Bottom"];
@@ -54,6 +55,7 @@ function Navbar({ authenticate, setAuthenticate }) {
           />
         </div>
       </div>
+      <SimpleSlider/>
       <div className="menu-area">
         <ul className="menu-list">
           {MenuList.map((menu) => (

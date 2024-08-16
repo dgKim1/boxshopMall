@@ -227,9 +227,23 @@ display: inline-block;
     color: #888;
 }
 
+#banner {
+  position: fixed;  /*고정*/
+  width: 162px;  /*가로길이*/
+  height: 835px;  /*세로길이*/
+  right: 2px;      /*위치 지정 : 오른쪽에서 몇 px에 위치, 왼쪽 배너이면 left : 2px; */
+  top: 48px;     /* 위치 지정 : 상단에서 몇 px에 위치, 하단부터라면 bottom:48px; */
+  text-align:center;  /*중앙정렬*/
+  }
+
+  
 @media (max-width:575px){
   #products-list{
     padding-left: 24px;
+  }
+
+  #lank-slider{
+    display: none;
   }
 }
 
