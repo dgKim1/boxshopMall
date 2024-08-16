@@ -44,7 +44,7 @@ const SimpleSlider = () => {
         cssEase: "linear"
       };
   return (
-    <Container className='px-56 my-12' id="lank-slider">
+    <Container className='my-12' id="lank-slider">
       <div className='flex justify-center items-center'>
       <h className="text-3xl mb-4">인기 상품 순위🔥</h>
       </div>

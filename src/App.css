@@ -236,8 +236,12 @@ display: inline-block;
   text-align:center;  /*중앙정렬*/
   }
 
-  
-@media (max-width:575px){
+  #lank-slider{
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+
+@media (max-width:770px){
   #products-list{
     padding-left: 24px;
   }
