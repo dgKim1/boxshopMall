@@ -227,19 +227,20 @@ display: inline-block;
     color: #888;
 }
 
-#banner {
-  position: fixed;  /*고정*/
-  width: 162px;  /*가로길이*/
-  height: 835px;  /*세로길이*/
-  right: 2px;      /*위치 지정 : 오른쪽에서 몇 px에 위치, 왼쪽 배너이면 left : 2px; */
-  top: 48px;     /* 위치 지정 : 상단에서 몇 px에 위치, 하단부터라면 bottom:48px; */
-  text-align:center;  /*중앙정렬*/
-  }
-
   #lank-slider{
     padding-left: 200px;
     padding-right: 200px;
   }
+
+  #under-line{
+    position: absolute;
+    background-color: #f72d4e;
+    width: 0;
+    left: 0;
+    padding: 0;
+    height: 3px;
+    transition: 0.5s;
+}
 
   .heart-bttn{
     color: white;

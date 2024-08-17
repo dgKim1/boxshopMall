@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { IoPerson } from "react-icons/io5";
@@ -8,7 +8,12 @@ import { IoPersonOutline } from "react-icons/io5";
 import Sidebar from './Sidebar';
 import SimpleSlider from './SimpleSlider';
 
+
+
+
+
 function Navbar({ authenticate, setAuthenticate }) {
+  let underLine = document.getElementById('under-line');
   const MenuList = ["여성", "남성", "Top", "Bottom"];
   const navigate = useNavigate();
   const goToLogin = () => {
@@ -27,14 +32,34 @@ function Navbar({ authenticate, setAuthenticate }) {
     }
   };
 
-  const onClickTab = (menu) =>{
-    navigate(`/filter?search=${menu}`)
+  const onClickTab = (event,menu) =>{
+
+    navigate(`/filter?search=${menu}`);
+    horizontalIndicator(event);
   }
 
   const goToHome = () => {
     navigate("/");
   };
 
+  function horizontalIndicator(e) {
+    console.log(e.currentTarget);
+    underLine.style.left = e.currentTarget.offsetLeft + "px";
+    underLine.style.width = e.currentTarget.offsetWidth + "px";
+    underLine.style.top =
+      e.currentTarget.offsetTop - 2 + e.currentTarget.offsetHeight + "px";
+  }
+
+
+
+useEffect(()=>{
+let underLine = document.getElementById('under-line');
+const firstMenu = document.getElementById('menu');
+console.log(firstMenu.offsetLeft);
+underLine.style.left = firstMenu.getBoundingClientRect().left+ "px";
+underLine.style.width = firstMenu.offsetWidth+ "px";
+underLine.style.top = (firstMenu.getBoundingClientRect().top+ firstMenu.offsetHeight-2) + "px";
+},[]);
 
   return (
     <div>
@@ -58,8 +83,9 @@ function Navbar({ authenticate, setAuthenticate }) {
       <SimpleSlider/>
       <div className="menu-area">
         <ul className="menu-list">
+        <div id="under-line"></div>
           {MenuList.map((menu) => (
-            <li onClick={()=>onClickTab(menu)} className='outfit-shop'>{menu}</li>
+            <li onClick={(event)=>onClickTab(event,menu)} className='outfit-shop' id='menu'>{menu}</li>
           ))}
         </ul>
       </div>

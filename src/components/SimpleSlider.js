@@ -46,7 +46,7 @@ const SimpleSlider = () => {
   return (
     <Container className='my-12' id="lank-slider">
       <div className='flex justify-center items-center'>
-      <h className="text-3xl mb-4">인기 상품 순위🔥</h>
+      <h className="outfit-shop text-3xl mb-4">인기 상품 순위🔥</h>
       </div>
     <Slider {...settings}>
       {
