@@ -13,7 +13,6 @@ import SimpleSlider from './SimpleSlider';
 
 
 function Navbar({ authenticate, setAuthenticate }) {
-  let underLine = document.getElementById('under-line');
   const MenuList = ["여성", "남성", "Top", "Bottom"];
   const navigate = useNavigate();
   const goToLogin = () => {
@@ -43,22 +42,20 @@ function Navbar({ authenticate, setAuthenticate }) {
   };
 
   function horizontalIndicator(e) {
-    console.log(e.currentTarget);
+    let underLine = document.getElementById('under-line');
     underLine.style.left = e.currentTarget.offsetLeft + "px";
     underLine.style.width = e.currentTarget.offsetWidth + "px";
-    underLine.style.top =
-      e.currentTarget.offsetTop - 2 + e.currentTarget.offsetHeight + "px";
+    underLine.style.top = e.currentTarget.offsetTop + e.currentTarget.offsetHeight-3+"px";
   }
 
 
 
 useEffect(()=>{
-let underLine = document.getElementById('under-line');
-const firstMenu = document.getElementById('menu');
-console.log(firstMenu.offsetLeft);
-underLine.style.left = firstMenu.getBoundingClientRect().left+ "px";
-underLine.style.width = firstMenu.offsetWidth+ "px";
-underLine.style.top = (firstMenu.getBoundingClientRect().top+ firstMenu.offsetHeight-2) + "px";
+  let underLine = document.getElementById('under-line');
+let firstMenu = document.getElementById('menu');
+underLine.style.left = firstMenu.offsetLeft+ "px";
+underLine.style.width = firstMenu.offsetWidth + "px";
+underLine.style.top = firstMenu.offsetTop+firstMenu.offsetHeight+270-3+"px";
 },[]);
 
   return (

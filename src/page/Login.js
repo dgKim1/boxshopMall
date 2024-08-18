@@ -3,9 +3,6 @@ import { Container } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import { IoPerson } from "react-icons/io5";
 import { CiLock } from "react-icons/ci";
-import { FcGoogle } from "react-icons/fc";
-import { SiNaver } from "react-icons/si";
-import { FaFacebookSquare } from "react-icons/fa";
 
 const Login = ({setAuthenticate}) => {
   const navigate = useNavigate();

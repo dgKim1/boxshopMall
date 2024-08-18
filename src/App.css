@@ -228,8 +228,8 @@ display: inline-block;
 }
 
   #lank-slider{
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-bottom: 30px;
+    background-color: #fafafa;
   }
 
   #under-line{
@@ -240,6 +240,12 @@ display: inline-block;
     padding: 0;
     height: 3px;
     transition: 0.5s;
+    z-index: 1;
+}
+
+#best-img{
+  width: 200px;
+  height: 250px;
 }
 
   .heart-bttn{
