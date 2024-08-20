@@ -7,27 +7,27 @@ import ImgCard from './ImgCard';
 
 const SliderImg = [
   {
-    img: '/img/jacket_white.png',
+    img: '/img/img_white_1.png',
     number: "1"
   },
   {
-    img: 'https://noona-hnm.netlify.app/ankle-jeans.jpeg',
+    img: '/img/img_white_2.png',
     number: "2"
   },
   {
-    img: 'https://noona-hnm.netlify.app/regular-wide-jeans.jpeg',
+    img: '/img/img_white_3.png',
     number: "3"
   },
   {
-    img: 'https://noona-hnm.netlify.app/single-jacket.jpeg',
+    img: '/img/img_white_4.png',
     number: "4"
   },
   {
-    img: 'https://noona-hnm.netlify.app/sweat-shirt.jpeg',
+    img: '/img/img_white_5.png',
     number: "5"
   },
   {
-    img: 'https://noona-hnm.netlify.app/track-jacket.jpeg',
+    img: '/img/img_white_6.png',
     number: "6"
   },
   
@@ -45,9 +45,6 @@ const SimpleSlider = () => {
       };
   return (
     <Container className='my-12' id="lank-slider">
-      <div className='flex justify-center items-center'>
-      <h className="outfit-shop text-3xl my-4">인기 상품 순위🔥</h>
-      </div>
     <Slider {...settings}>
       {
         SliderImg.map((item)=>

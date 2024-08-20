@@ -228,8 +228,11 @@ display: inline-block;
 }
 
   #lank-slider{
+    padding-top: 30px;
     padding-bottom: 30px;
     background-color: #fafafa;
+    width: 60%;
+    margin-top: 0;
   }
 
   #under-line{
@@ -258,6 +261,47 @@ display: inline-block;
   .heart-bttn:hover{
     color: #f72d4e;
   }
+
+.heading-area{
+  height: 1px;
+  width: 100%;
+  background-color: #c5ccd2;
+}
+
+.outline-color{
+   border: 1px solid #c5ccd2;
+}
+
+.lilita-one-regular {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.footer-layer{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin-right: 5px;
+  padding: 15px;
+}
+.footer-layer strong{
+  margin-bottom: 10px;
+}
+
+.footer-bttn-table a{
+  border: solid rgb(209, 209, 209) 0.8px;
+  padding:  4px 8px;
+  text-decoration: none;
+  color: #555;
+  width: 45%;
+  text-align: center;
+}
+.footer-container{
+  border-top: 1px solid lightgray;
+}
+
+
 @media (max-width:770px){
   #products-list{
     padding-left: 24px;
