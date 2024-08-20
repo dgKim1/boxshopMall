@@ -24,10 +24,10 @@ const ProductDetail = () => {
     getProductDetail();
   }, []);
   return (
-    <Container>
+    <Container className='pb-16 pt-5'>
       <Row>
-        <Col className="flex justify-end">
-          <img src={product?.img} width={300} />
+        <Col className="flex justify-center">
+          <img src={product?.img} width={500} />
         </Col>
         <Col className='info-area'>
           <h2>{product?.title}</h2><br/>
@@ -110,7 +110,7 @@ const ProductDetail = () => {
               <strong>총 상품금액</strong><span>{`(수량):`}</span>&nbsp;
               <strong className='text-xl'>0</strong><span>{`(0개)`}</span>
               </div>
-              <div className='mt-4'>
+              <div className='mt-4 flex items-end'>
                 <a href='#none' className='bg-black no-underline px-3 py-2 rounded-md'><span className='text-white font-bold'>바로 구매하기</span></a>&nbsp;
                 <a href='#none' className='bg-white no-underline px-3 py-2 rounded-md outline-color'><span className='text-black text-center font-bold'>장바구니</span></a>&nbsp;
                 <a href='#none' className='bg-white no-underline px-4 py-2 rounded-md outline-color'><FaHeart className='inline-block' color='black'/></a>

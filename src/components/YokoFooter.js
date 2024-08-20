@@ -39,7 +39,7 @@ function YokoFooter() {
         <div className='footer-layer'>
         <strong className='lilita-one-regular'>RETURN/EXCHANGE</strong>
         <small className='text-footer-p'>
-        {`[교혼/반품 주소지]`}<br/>
+        {`[교환/반품 주소지]`}<br/>
         서울 성북구 정릉로 정릉빌딩 406호
             <br/>
             CJ대한통운 고객센터 : 1588-1255

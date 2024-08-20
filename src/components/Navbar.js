@@ -15,6 +15,10 @@ import SimpleSlider from './SimpleSlider';
 
 function Navbar({ authenticate, setAuthenticate,isSlide,setIsSlide }) {
   const MenuList = ["All","Women", "Man", "Top", "Bottom"];
+  const [windowSize, setWindowSize] = useState({
+    width : undefined,
+    height: undefined,
+});
   const navigate = useNavigate();
   const goToLogin = () => {
     console.log(authenticate);
@@ -53,14 +57,22 @@ function Navbar({ authenticate, setAuthenticate,isSlide,setIsSlide }) {
   }
 
 
-
 useEffect(()=>{
-  let underLine = document.getElementById('under-line');
+let underLine = document.getElementById('under-line');
 let firstMenu = document.getElementById('menu');
 underLine.style.left = firstMenu.offsetLeft+ "px";
 underLine.style.width = firstMenu.offsetWidth + "px";
 underLine.style.top = firstMenu.offsetTop+firstMenu.offsetHeight-3+"px";
 },[isSlide]);
+useEffect(()=>{
+  window.addEventListener("resize",setWindowSize({
+    // 현재 브라우저의 가로, 세로 길이로 셋팅
+              width: window.innerWidth,
+              height: window.innerHeight,
+  
+          }))
+
+},[windowSize])
 
   return (
     <div>
