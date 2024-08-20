@@ -15,6 +15,7 @@ import SimpleSlider from './SimpleSlider';
 
 function Navbar({ authenticate, setAuthenticate,isSlide,setIsSlide }) {
   const MenuList = ["All","Women", "Man", "Top", "Bottom"];
+  const [clickTarget,setClickTarget] = useState(null);
   const [windowSize, setWindowSize] = useState({
     width : undefined,
     height: undefined,
@@ -49,30 +50,41 @@ function Navbar({ authenticate, setAuthenticate,isSlide,setIsSlide }) {
     navigate("/");
   };
 
-  function horizontalIndicator(e) {
+  function horizontalIndicator(target) {
+    if(target===null) setUnderline();//첫 마운트시 클릭 이벤트가 없으므로 무조건 target이 null이 되는 에러 처리
+    else{
     let underLine = document.getElementById('under-line');
-    underLine.style.left = e.currentTarget.offsetLeft + "px";
-    underLine.style.width = e.currentTarget.offsetWidth + "px";
-    underLine.style.top = e.currentTarget.offsetTop + e.currentTarget.offsetHeight-3+"px";
+    underLine.style.left = target.offsetLeft + "px";
+    underLine.style.width = target.offsetWidth + "px";
+    underLine.style.top = target.offsetTop + target.offsetHeight+"px";
+    }
+  }
+  function setUnderline(){
+    let underLine = document.getElementById('under-line');
+let firstMenu = document.getElementById('menu');
+underLine.style.left = firstMenu.offsetLeft+ "px";
+underLine.style.width = firstMenu.offsetWidth + "px";
+underLine.style.top = firstMenu.offsetTop+firstMenu.offsetHeight+"px";
+
+  }
+
+  function resizeWindow(){
+    setWindowSize({
+      // 현재 브라우저의 가로, 세로 길이로 셋팅
+                width: window.innerWidth,
+                height: window.innerHeight,
+    
+            })
   }
 
 
 useEffect(()=>{
-let underLine = document.getElementById('under-line');
-let firstMenu = document.getElementById('menu');
-underLine.style.left = firstMenu.offsetLeft+ "px";
-underLine.style.width = firstMenu.offsetWidth + "px";
-underLine.style.top = firstMenu.offsetTop+firstMenu.offsetHeight-3+"px";
+  setUnderline();
 },[isSlide]);
 useEffect(()=>{
-  window.addEventListener("resize",setWindowSize({
-    // 현재 브라우저의 가로, 세로 길이로 셋팅
-              width: window.innerWidth,
-              height: window.innerHeight,
-  
-          }))
-
-},[windowSize])
+  window.addEventListener("resize",resizeWindow)
+  horizontalIndicator(clickTarget)
+},[windowSize]);
 
   return (
     <div>
@@ -108,7 +120,11 @@ useEffect(()=>{
         <ul className="menu-list">
         <div id="under-line"></div>
           {MenuList.map((menu) => (
-            <li onClick={(event)=>onClickTab(event,menu)} className='lilita-one-small' id='menu'>{menu}</li>
+            <li onClick={(event)=>{
+              onClickTab(event.target,menu)
+              setClickTarget(event.currentTarget)
+            }} 
+              className='lilita-one-small' id='menu'>{menu}</li>
           ))}
         </ul>
       </div>

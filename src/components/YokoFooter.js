@@ -26,7 +26,7 @@ function YokoFooter() {
         <strong className='lilita-one-regular'>CUSTOMER CENTER</strong>
         <strong>070-0000-0000</strong>
         <small className='text-footer-p'>
-            Mon-Fri PM13:00 ~ PM17:00
+            Mon-Fri PM 13:00 ~ PM 17:00
             <br/>
         {`(주말,공휴일 휴무)`}
         </small>
