@@ -13,10 +13,9 @@ import SimpleSlider from './SimpleSlider';
 
 
 
-function Navbar({ authenticate, setAuthenticate }) {
-  const MenuList = ["All","여성", "남성", "Top", "Bottom"];
+function Navbar({ authenticate, setAuthenticate,isSlide,setIsSlide }) {
+  const MenuList = ["All","Women", "Man", "Top", "Bottom"];
   const navigate = useNavigate();
-  const [isSlide,setIsSlide] = useState(true);
   const goToLogin = () => {
     console.log(authenticate);
     if (authenticate) {
@@ -85,7 +84,7 @@ underLine.style.top = firstMenu.offsetTop+firstMenu.offsetHeight-3+"px";
       </div>
       {
         isSlide? (<div className='flex justify-center items-center'>
-        <h className="outfit-shop text-3xl my-4">인기 상품🔥</h>
+        <h className="lilita-one-big my-4">Best&nbsp;&nbsp;Products🔥</h>
         </div>):null
       }
       {
@@ -97,7 +96,7 @@ underLine.style.top = firstMenu.offsetTop+firstMenu.offsetHeight-3+"px";
         <ul className="menu-list">
         <div id="under-line"></div>
           {MenuList.map((menu) => (
-            <li onClick={(event)=>onClickTab(event,menu)} className='outfit-shop' id='menu'>{menu}</li>
+            <li onClick={(event)=>onClickTab(event,menu)} className='lilita-one-small' id='menu'>{menu}</li>
           ))}
         </ul>
       </div>

@@ -3,10 +3,11 @@ import { Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom'
 import { FaRegHeart } from "react-icons/fa";
 
-const ProductCard = ({item}) => {
+const ProductCard = ({item,setIsSlide}) => {
   const navigate = useNavigate();
   const showDetail = ()=>{
     navigate(`/product/${item.id}`);
+    setIsSlide(false);
   }
   return (
     <Card className='card-box' onClick={showDetail}>

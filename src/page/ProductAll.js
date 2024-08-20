@@ -6,16 +6,16 @@ import Col from 'react-bootstrap/Col';
 import { useSearchParams } from 'react-router-dom';
 import SimpleSlider from '../components/SimpleSlider';
 
-const ProductAll = ({tab}) => {
+const ProductAll = ({tab,setIsSlide}) => {
   const [productList, setProductList] = useState(null);
   const [query,setQuery] = useSearchParams();
-
   const getProducts = async () => {
     let searchQuery = query.get('q')||"";
     let url = `https://my-json-server.typicode.com/dgKim1/boxshopMall/products?q=${searchQuery}`;
     let response = await fetch(url);
     let data = await response.json();
     setProductList(data);
+    setIsSlide(true);
   };
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const ProductAll = ({tab}) => {
             {
             productList&&productList.map((product)=>(
               <Col lg={3}>
-              <ProductCard item={product}/>
+              <ProductCard item={product} setIsSlide={setIsSlide}/>
               </Col>
             ))
             }

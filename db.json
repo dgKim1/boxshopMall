@@ -9,7 +9,7 @@
             "new":true,
             "size":["S","M","L"],
             "category": "Top",
-            "gender":"여성"    
+            "gender":"Women"    
         },
         {
             "id":1,
@@ -20,7 +20,7 @@
             "new":true,
             "size":["S","M","L"],
             "category": "Top",
-            "gender": "남성"
+            "gender": "Man"
 
         },
         {
@@ -32,7 +32,7 @@
             "new":true,
             "size":["S","M","L"],
             "category": "Top",
-            "gender":"여성" 
+            "gender":"Woman" 
 
         },
         {
@@ -44,7 +44,7 @@
             "new":true,
             "size":["S","M","L"],
             "category": "Top",
-            "gender":"여성" 
+            "gender":"Woman" 
 
         },
         {
@@ -56,7 +56,7 @@
             "new":false,
             "size":["S","M","L"],
             "category": "Top",
-            "gender":"여성" 
+            "gender":"Woman" 
 
         },
         {
@@ -68,7 +68,7 @@
             "new":false,
             "size":["S","M","L"],
             "category": "Top",
-            "gender":"여성" 
+            "gender":"Woman" 
 
         },
         {
@@ -80,7 +80,7 @@
             "new":false,
             "size":["S","M","L"],
             "category": "Top",
-            "gender":"남성" 
+            "gender":"Man" 
 
         },
         {
@@ -92,7 +92,7 @@
             "new":true,
             "size":["S","M","L"],
             "category": "Top",
-            "gender":"남성" 
+            "gender":"Man" 
 
         },
         {
@@ -104,7 +104,7 @@
             "new":true,
             "size":["S","M","L"],
             "category": "Top",
-            "gender":"남성" 
+            "gender":"Man" 
 
         },
         {
@@ -116,7 +116,7 @@
             "new":true,
             "size":["S","M","L"],
             "category": "Top",
-            "gender":"여성" 
+            "gender":"Woman" 
 
         },
         {
@@ -128,7 +128,7 @@
             "new":false,
             "size":["S","M","L"],
             "category": "Bottom",
-            "gender":"여성" 
+            "gender":"Woman" 
 
         },
         {
@@ -140,7 +140,7 @@
             "new":true,
             "size":["S","M","L"],
             "category": "Bottom",
-            "gender":"여성" 
+            "gender":"Woman" 
 
         },
         {
@@ -152,7 +152,7 @@
             "new":true,
             "size":["S","M","L"],
             "category": "Top",
-            "gender":"여성" 
+            "gender":"Woman" 
 
         },
         {
@@ -164,7 +164,7 @@
             "new":false,
             "size":["S","M","L"],
             "category": "Top",
-            "gender":"여성" 
+            "gender":"Woman" 
 
         }
     ]
