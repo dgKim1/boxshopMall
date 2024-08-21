@@ -32,7 +32,7 @@
             "new":true,
             "size":["S","M","L"],
             "category": "Top",
-            "gender":"Woman" 
+            "gender":"Women" 
 
         },
         {
@@ -44,7 +44,7 @@
             "new":true,
             "size":["S","M","L"],
             "category": "Top",
-            "gender":"Woman" 
+            "gender":"Women" 
 
         },
         {
@@ -56,7 +56,7 @@
             "new":false,
             "size":["S","M","L"],
             "category": "Top",
-            "gender":"Woman" 
+            "gender":"Women" 
 
         },
         {
@@ -68,7 +68,7 @@
             "new":false,
             "size":["S","M","L"],
             "category": "Top",
-            "gender":"Woman" 
+            "gender":"Women" 
 
         },
         {
@@ -116,7 +116,7 @@
             "new":true,
             "size":["S","M","L"],
             "category": "Top",
-            "gender":"Woman" 
+            "gender":"Women" 
 
         },
         {
@@ -128,7 +128,7 @@
             "new":false,
             "size":["S","M","L"],
             "category": "Bottom",
-            "gender":"Woman" 
+            "gender":"Women" 
 
         },
         {
@@ -140,7 +140,7 @@
             "new":true,
             "size":["S","M","L"],
             "category": "Bottom",
-            "gender":"Woman" 
+            "gender":"Women" 
 
         },
         {
@@ -152,7 +152,7 @@
             "new":true,
             "size":["S","M","L"],
             "category": "Top",
-            "gender":"Woman" 
+            "gender":"Women" 
 
         },
         {
@@ -164,7 +164,7 @@
             "new":false,
             "size":["S","M","L"],
             "category": "Top",
-            "gender":"Woman" 
+            "gender":"Women" 
 
         }
     ]

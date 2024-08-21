@@ -1,8 +1,14 @@
 import React from 'react'
-import { Row } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { Container } from 'react-bootstrap'
+
 
 function YokoFooter() {
   return (
+    <>
     <footer className='footer-container
     
     flex justify-center py-4'>
@@ -67,8 +73,18 @@ function YokoFooter() {
             </small>
         </div>
         </div>
-
     </footer>
+    <div className='sns-layer pb-6'>
+    <a href='#'><FontAwesomeIcon icon={faFacebook} className='fa-lg '/></a>
+    <a href='#' className='mx-3'><FontAwesomeIcon icon={faInstagram} className='fa-lg'/></a>
+    <a href='#'><FontAwesomeIcon icon={faTwitter} className='fa-lg'/></a>
+    </div>
+    <div className='copyright-layer'>
+        <Container>
+        <p className='m-0'>copyright @ 2024 KDG</p>
+        </Container>
+    </div>
+</>
   )
 }
 

@@ -12,7 +12,7 @@ const ProductCard = ({item,setIsSlide}) => {
   return (
     <Card className='card-box' onClick={showDetail}>
         <Card.Img src={item.img} width={250}/>
-        <button className='heart-bttn'><FaRegHeart size={30}/></button>
+        <button className='heart-bttn'><FaRegHeart size={30} /></button>
         <Card.Body>
         {item.choice?<Card.Subtitle className='mb-2'>Consious choice</Card.Subtitle>:null}
         <Card.Title >{item.title}</Card.Title>

@@ -10,7 +10,7 @@ function ProductFilter() {
   const getProducts = async () => {
     let tabQuery = query.get('search')||"";
     let url = `https://my-json-server.typicode.com/dgKim1/boxshopMall/products?&`;
-    (tabQuery === "남성")||(tabQuery==="여성") ? url+=`gender=${tabQuery}`:url+=`category=${tabQuery}`;
+    (tabQuery === "Man")||(tabQuery==="Women") ? url+=`gender=${tabQuery}`:url+=`category=${tabQuery}`;
     console.log(url);
     let response = await fetch(url);
     let data = await response.json();

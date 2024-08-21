@@ -89,8 +89,8 @@ useEffect(()=>{
   return (
     <div>
       <div className="login-bttn" onClick={goToLogin}>
-        <span className='mr-2'><RiShoppingBag4Fill size={25}/></span>
-        {authenticate ? <><IoPerson size={25}/><div>로그아웃</div></> : <><IoPersonOutline size={25}/><div>로그인</div></>}
+        <span className='login-shop mr-2'><RiShoppingBag4Fill size={25}/></span>
+        {authenticate ? <div className='login-person'><IoPerson size={25}/><div>로그아웃</div></div> : <div className='login-person'><IoPersonOutline size={25}/><div >로그인</div></div>}
       </div>
       <div className="logo-img" onClick={goToHome}>
         <img width={300}  src='/img/shopmallLogo.png' />
