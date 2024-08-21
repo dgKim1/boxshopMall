@@ -11,6 +11,8 @@ const ProductCard = ({item,setIsSlide}) => {
     setIsSlide(false);
   }
 
+  console.log(item.title);
+
   return (
     <Card className='card-box' onClick={showDetail}>
         <Card.Img src={item.img} width={250}/>
@@ -18,7 +20,7 @@ const ProductCard = ({item,setIsSlide}) => {
         ><FaRegHeart size={30} /></button>
         <Card.Body>
         {item.choice?<Card.Subtitle className='mb-2'>Consious choice</Card.Subtitle>:null}
-        <Card.Title >{item.title}</Card.Title>
+        <Card.Title >{item.title=="슬림핏 맘 하이웨이스트 앵클 진"?"슬림핏 ... 앵클진" : item.title}</Card.Title>
         <Card.Text className='mb-1'>${item.price}</Card.Text>
         <Card.Text className='mb-1'>{item.new===true?"신제품":""}</Card.Text>
         </Card.Body>

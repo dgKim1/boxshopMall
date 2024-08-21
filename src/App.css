@@ -181,7 +181,9 @@
   margin-bottom: 30px;
   min-height: 616px;
 }
-
+.card-box div{
+ max-height: 136px;
+}
 .card-box:hover {
   scale: 110%;
 }
