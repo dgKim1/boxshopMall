@@ -361,4 +361,7 @@ li:first-child a {
   #lank-slider {
     display: none;
   }
+  .footer-layer{
+    display: none;
+  }
 }
