@@ -1,18 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom'
 import { FaRegHeart } from "react-icons/fa";
 
 const ProductCard = ({item,setIsSlide}) => {
   const navigate = useNavigate();
+  const [isOn,setisOn] = useState(false);
   const showDetail = ()=>{
-    navigate(`/product/${item.id}`);
+    navigate(`/product/${item.id}?img=${item.img}&&title=${item.title}&&price=${item.price}`);
     setIsSlide(false);
   }
+
   return (
     <Card className='card-box' onClick={showDetail}>
         <Card.Img src={item.img} width={250}/>
-        <button className='heart-bttn'><FaRegHeart size={30} /></button>
+        <button className='heart-bttn'
+        ><FaRegHeart size={30} /></button>
         <Card.Body>
         {item.choice?<Card.Subtitle className='mb-2'>Consious choice</Card.Subtitle>:null}
         <Card.Title >{item.title}</Card.Title>

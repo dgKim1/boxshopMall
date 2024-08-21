@@ -257,10 +257,11 @@ li:first-child a {
 }
 
 .heart-bttn {
-  color: white;
   bottom: 35px;
   left: 260px;
   position: relative;
+  transition: all 0.3s ease;
+  color: white;
 }
 
 .heart-bttn:hover {
