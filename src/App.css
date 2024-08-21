@@ -366,4 +366,9 @@ li:first-child a {
   .footer-layer{
     display: none;
   }
+
+  .login-wrap{
+    height: 80%;
+    width: 140%;
+  }
 }
