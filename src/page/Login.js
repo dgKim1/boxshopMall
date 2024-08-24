@@ -13,7 +13,7 @@ const Login = ({setAuthenticate}) => {
 
   }
   return ( 
-    <Container className='h-full flex justify-center'>
+    <Container className='h-full '>
       <div className='login-wrap'>
         <form className='h-3/5 login-form'>
           <div className='flex items-center mb-3'>
