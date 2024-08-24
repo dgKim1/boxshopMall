@@ -16,7 +16,9 @@ function App() {
   const [isSlide,setIsSlide] = useState(true);
   return (
     <>
+    <head>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
+    </head>
     <div className='h-full'>
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
