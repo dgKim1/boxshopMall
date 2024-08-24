@@ -15,6 +15,8 @@ function App() {
   const [authenticate,setAuthenticate] = useState(false);
   const [isSlide,setIsSlide] = useState(true);
   return (
+    <>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
     <div className='h-full'>
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -29,8 +31,8 @@ function App() {
       </Routes>
       <YokoFooter/>
 
-    
     </div>
+    </>
   );
 }
 
