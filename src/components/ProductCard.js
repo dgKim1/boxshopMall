@@ -7,11 +7,10 @@ const ProductCard = ({item,setIsSlide}) => {
   const navigate = useNavigate();
   const [isOn,setisOn] = useState(false);
   const showDetail = ()=>{
-    navigate(`/product/${item.id}?img=${item.img}&&title=${item.title}&&price=${item.price}`);
+    navigate(`/product/${item.id}`);
     setIsSlide(false);
   }
 
-  console.log(item.title);
 
   return (
     <Card className='card-box' onClick={showDetail}>
